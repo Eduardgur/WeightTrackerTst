@@ -1,0 +1,33 @@
+{
+  "name": "wight-tracker",
+  "version": "1.0.0",
+  "main": "sec/bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bootstrap.js",
+    "dev": "nodemon --watch src -e ejs,js src/index.js",
+    "initdb": "node tools/initdb.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/bell": "^12.2.0",
+    "@hapi/boom": "^9.1.2",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^19.2.0",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^6.0.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "hapi": "^18.1.0",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "description": ""
+}
