@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         success {
-            azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '*,*/*,**/*,node_modules,node_modules/*', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
+            azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '*,*/*,node_modules,node_modules/*', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
         }
     }
 }
