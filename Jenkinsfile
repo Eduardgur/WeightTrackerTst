@@ -20,7 +20,9 @@ pipeline {
     }
     post {
         success {
+            sh "ls -la"
             azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '**/*', excludeFilesPath: '.git, .gitignore, README.md, Jenkinsfile' , storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
+            sh "ls -la"
         }
     }
 }
