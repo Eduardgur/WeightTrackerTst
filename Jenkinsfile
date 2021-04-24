@@ -20,6 +20,8 @@ pipeline {
     }
     post {
         success {
+            archiveArtifacts artifacts: '**/*', followSymlinks: false, onlyIfSuccessful: true
+            sh 'ls -la'
             azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '**/*', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
         }
     }
