@@ -24,5 +24,8 @@ pipeline {
             azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '**/*', excludeFilesPath: '.git, .gitignore, README.md, Jenkinsfile' , storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
             sh "ls -la"
         }
+        always {
+            sh "rm -R -f ./**"
+        }
     }
 }
