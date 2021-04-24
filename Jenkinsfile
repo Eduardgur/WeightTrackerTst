@@ -20,9 +20,9 @@ pipeline {
     }
     post {
         success {
-            archiveArtifacts artifacts: '**/*', followSymlinks: false, onlyIfSuccessful: true
+            tar --exclude='.git' --exclude='.gitignore' --exclude='Jenkinsfile' -czvf app.tar.gz .
             sh 'ls -la'
-            azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '**/*', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
+            azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '*.tar.gz', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
         }
     }
 }
