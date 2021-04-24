@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         success {
-            tar --exclude='.git' --exclude='.gitignore' --exclude='Jenkinsfile' -czvf app.tar.gz .
+            sh "tar --exclude='.git' --exclude='.gitignore' --exclude='Jenkinsfile' -czvf app.tar.gz ."
             sh 'ls -la'
             azureUpload containerName: 'jenkinsblob', doNotUploadIndividualFiles: true, filesPath: '*.tar.gz', storageCredentialId: 'AzureStorage', storageType: 'blobstorage', uploadArtifactsOnlyIfSuccessful: true, uploadZips: true
         }
