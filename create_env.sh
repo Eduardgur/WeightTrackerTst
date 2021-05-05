@@ -1,7 +1,8 @@
 #!/bin/bash
-rm -f ./.env
-cp ./.env.back /.env
+sudo rm -f .env
+sudo cp .env.back .env
 
+defaultPublicIp="{PUBLIC_IP}"
 defaultOktaUrl="{OKTA_URL}"
 defaultOktaId="{OKTA_ID}"
 defaultOktSec="{OKTA_SECRET}"
@@ -17,6 +18,7 @@ dbIp=$4
 dbName=$5
 dbUser=$6
 dbPass=$7
+publicIp=$8
 
 envFile="./.env"
 
