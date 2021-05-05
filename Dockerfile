@@ -6,5 +6,6 @@ COPY . APP/
 
 WORKDIR App/
 
+EXPOSE 8080
 
 CMD ["node", "bootstrap.js"]
