@@ -2,6 +2,7 @@
 sudo rm -f .env
 sudo cp .env.back .env
 
+defaultPublicIp="{PUBLIC_IP}"
 defaultOktaUrl="{OKTA_URL}"
 defaultOktaId="{OKTA_ID}"
 defaultOktSec="{OKTA_SECRET}"
