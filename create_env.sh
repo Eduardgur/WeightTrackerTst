@@ -17,6 +17,7 @@ dbIp=$4
 dbName=$5
 dbUser=$6
 dbPass=$7
+publicIp=$8
 
 envFile="./.env"
 
