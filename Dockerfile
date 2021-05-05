@@ -1,11 +1,11 @@
 FROM node:latest
 
-RUN apt update -y
+RUN apt update -y && apt-get update -y
 
-COPY WeightTrackerTst/ APP/
+COPY . APP/
 
 WORKDIR App/
 
-# RUN npm install
+EXPOSE 8080
 
 CMD ["node", "bootstrap.js"]
