@@ -1,6 +1,6 @@
 #!/bin/bash
-rm -f ./.env
-cp ./.env.back /.env
+sudo rm -f ./.env
+sudo cp ./.env.back /.env
 
 defaultOktaUrl="{OKTA_URL}"
 defaultOktaId="{OKTA_ID}"
