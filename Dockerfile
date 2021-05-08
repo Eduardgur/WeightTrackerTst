@@ -1,6 +1,5 @@
-FROM node:latest
+FROM node:slim
 
-# RUN apt update -y && apt-get update -y
 WORKDIR app/
 
 COPY . .
