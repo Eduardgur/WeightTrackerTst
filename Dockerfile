@@ -1,6 +1,6 @@
-FROM node:15-alpine
+FROM node:slim
 
-WORKDIR weighttracker/
+WORKDIR app/
 
 COPY package*.json ./
 
@@ -10,5 +10,6 @@ COPY . .
 
 EXPOSE 8080
 
-ENTRYPOINT [ "node" ]
-CMD ["bootstrap.js"]
+RUN npm run initdb
+
+CMD npm run initdb && node bootstrap.js
