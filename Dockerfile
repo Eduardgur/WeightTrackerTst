@@ -1,11 +1,13 @@
 FROM node:latest
 
-RUN apt update -y && apt-get update -y
-
-COPY . app/
-
+# RUN apt update -y && apt-get update -y
 WORKDIR app/
+
+COPY . .
+
+RUN npm install
 
 EXPOSE 8080
 
-CMD ["node", "bootstrap.js"]
+ENTRYPOINT [ "npm" ]
+CMD ["start", "bootstrap.js"]
