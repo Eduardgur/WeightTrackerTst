@@ -1,6 +1,6 @@
 FROM node:15-alpine
 
-WORKDIR app/
+WORKDIR weighttracker/
 
 COPY package*.json ./
 
