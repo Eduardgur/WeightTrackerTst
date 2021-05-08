@@ -10,5 +10,5 @@ COPY . .
 
 EXPOSE 8080
 
-ENTRYPOINT [ "node" ]
-CMD ["bootstrap.js"]
+ENTRYPOINT [ "npm" ]
+CMD ["run", "dev"]
