@@ -2,9 +2,9 @@ FROM node:latest
 
 RUN apt update -y && apt-get update -y
 
-COPY . APP/
+COPY . app/
 
-WORKDIR App/
+WORKDIR app/
 
 EXPOSE 8080
 
