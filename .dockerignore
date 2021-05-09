@@ -3,3 +3,5 @@
 *.md
 .env.back
 create_env.sh
+.dockerignore
+Dockerfile
