@@ -1,11 +1,11 @@
-FROM node:latest
+FROM node:alpin-15
 
-RUN apt update -y && apt-get update -y
+WORKDIR app/
 
-COPY . APP/
+COPY . .
 
-WORKDIR App/
+RUN npm install
 
 EXPOSE 8080
 
-CMD ["node", "bootstrap.js"]
+CMD npm run initdb && node bootstrap.js
