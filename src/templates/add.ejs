@@ -51,7 +51,7 @@
 				this.disabled = true;
 				this.message = "";
 				this.errorMessage = "";
-				const response = await fetch("/api/measurements", {
+				const response = await fetch("api/measurements", {
 					method: "POST",
 					credentials: "same-origin",
 					headers: {

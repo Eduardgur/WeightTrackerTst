@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD npm run initdb && node bootstrap.js
+CMD node bootstrap.js
